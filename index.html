@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackMatch - Auto Team Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤝 HackMatch Algorithm</h1>
+            <p>Smart skill-balancing for hackathon teams</p>
+        </header>
+
+        <div class="main-grid">
+            <div class="input-section card">
+                <h2>Add Participant</h2>
+                <input type="text" id="nameInput" placeholder="Enter Name (e.g., Rahul)">
+                <select id="roleInput">
+                    <option value="Frontend">Frontend Developer</option>
+                    <option value="Backend">Backend Developer</option>
+                    <option value="UI/UX">UI/UX Designer</option>
+                    <option value="ML/AI">ML/AI Engineer</option>
+                </select>
+                <button onclick="addParticipant()">Add to Pool</button>
+            </div>
+
+            <div class="list-section card">
+                <h2>Participant Pool (<span id="count">0</span>)</h2>
+                <ul id="participants">
+                    <li class="empty-msg">No participants added yet.</li>
+                </ul>
+                <button class="generate-btn" onclick="generateTeams()">⚡ Auto-Match Teams</button>
+            </div>
+        </div>
+
+        <div id="teamsContainer" class="teams-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
